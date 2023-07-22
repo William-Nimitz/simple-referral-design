@@ -2,7 +2,7 @@
   "name": "dn",
   "version": "1.0.0",
   "description": "html javascript bootstrap.v5 jquery",
-  "main": "src/index.html",
+  "source": "src/index.html",
   "scripts": {
     "serve": "parcel"
   },
