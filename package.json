@@ -2,7 +2,7 @@
   "name": "dn",
   "version": "1.0.0",
   "description": "html javascript bootstrap.v5 jquery",
-  "main": "index.js",
+  "main": "src/index.html",
   "scripts": {
     "serve": "parcel"
   },
@@ -11,7 +11,7 @@
   ],
   "author": "me",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "parcel": "^2.9.3"
   }
 }
