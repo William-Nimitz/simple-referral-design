@@ -1,0 +1,17 @@
+{
+  "name": "dn",
+  "version": "1.0.0",
+  "description": "html javascript bootstrap.v5 jquery",
+  "main": "index.js",
+  "scripts": {
+    "serve": "parcel"
+  },
+  "keywords": [
+    "html"
+  ],
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.9.3"
+  }
+}
