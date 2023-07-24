@@ -1,10 +1,10 @@
-
 :root {
     --black: #000000;
     --gray: #808080;
     --gray-1: #909090;
     --bg-white: #ffffff;
     --bg-primary: #d2d5ed;
+    --bg-light-primary: #dee1f2a3;
     --bg-white-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 
@@ -12,9 +12,14 @@
     background-color: var(--bg-primary);
 }
 
+.bg-custom-light-primary {
+    background-color: var(--bg-light-primary) !important;
+}
+
 .text-gray {
     color: var(--gray-1) !important;
 }
+
 /* skeleton  */
 .skeleton-container {
     pointer-events: none;
@@ -23,64 +28,71 @@
 .skeleton-row {
     display: flex;
     align-items: end;
-  }
-  
-  .skeleton-image {
+}
+
+.skeleton-image {
     width: 20px;
     height: 20px;
     background-color: #ccc;
     margin-right: 10px;
-  }
-  
-  .skeleton-text {
+}
+
+.skeleton-text {
     height: 15px;
     background-color: #ccc;
     margin-bottom: 10px;
     display: inline-block;
-  }
-  
-  /* Add some animation to make the skeleton screen feel more dynamic */
-  @keyframes loading {
+}
+
+/* Add some animation to make the skeleton screen feel more dynamic */
+@keyframes loading {
     0% {
-      background-color: #ccc;
+        background-color: #ccc;
     }
+
     50% {
-      background-color: #ddd;
+        background-color: #ddd;
     }
+
     100% {
-      background-color: #ccc;
+        background-color: #ccc;
     }
-  }
-  
-  .skeleton {
+}
+
+.skeleton {
     animation: loading 2s infinite;
     border-radius: 2px;
-  }
-  
-  .loading-alert {
+}
+
+.loading-alert {
     position: absolute !important;
     text-align: center;
     background-color: var(--bg-white) !important;
     box-shadow: var(--bg-white-shadow);
     top: calc(250px);
-    left: calc((100% - 412px) / 2);
-  }
-  .loading-alert p.loading-alert-decs {
+    left: calc((100% - 349px) / 2);
+}
+
+.loading-alert p.loading-alert-decs {
     color: var(--gray);
-  }
+}
+
 /* selected-referral */
 .selected-referral-logo {
     width: 200px;
     height: 200px;
     border-radius: 8px;
 }
+
 /* referrals-table */
 .referrals-table {
     position: relative;
 }
+
 .referrals-table table {
     min-width: 700px;
 }
+
 .referrals-table table tbody tr {
     cursor: pointer;
 }
@@ -90,6 +102,7 @@
     font-size: 16px;
     color: var(--gray);
 }
+
 .company-info {
     width: 65%;
 }
@@ -146,6 +159,9 @@
 
 .selected-referral-link-wrapper {
     font-size: 16px !important;
+    padding: 7px 20px 7px 20px;
+    border-radius: 50rem;
+    cursor: pointer;
 }
 
 .selected-referral-info {
@@ -154,34 +170,187 @@
 
 .selected-referral-link-button {
     font-size: 18px !important;
-    padding-bottom: 10px !important;
+    border-radius: 50rem;
+    padding: 10px 20px 10px 20px !important;
     margin-left: 10px !important;
     margin-top: 0;
     cursor: pointer;
+    color: white;
+}
+
+/* modal sectioin  */
+.modal-header {
+    border-bottom: none !important;
+}
+
+.modal-container {
+    padding: 50px;
+}
+
+.modal-selected-referral-send-to-container {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.send-to {
+    font-size: 16px !important;
+    padding-bottom: 5px !important;
+    color: darkgray !important;
+}
+
+.modal-selected-referral-preview-container {
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.remove-email-from-share {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.modal-selected-referral-preview-body {
+    padding: 40px 40px 30px 40px;
+}
+
+.modal-selected-referral-preview-info {
+    background-color: var(--bg-primary);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.selected-referral-link-butt-container {
+    align-items: center;
+}
+
+.referral-bonus-border-bottom {
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.modal-selected-referral-preview-from {
+    background-color: var(--bg-light-primary);
+    border-radius: 0 0 10px 10px;
+    padding: 15px 20px 15px 20px;
+}
+
+.modal-selected-referral-preview-from-email p,
+.modal-selected-referral-preview-from-subject p {
+    margin-bottom: 0;
+}
+
+.modal-footer {
+    margin-top: none !important;
+}
+
+.border-badge {
+    border-radius: 50rem !important;
+}
+
+/* tag input  */
+/*
+ * bootstrap-tagsinput v0.8.0
+ * 
+ */
+
+.bootstrap-tagsinput {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    display: inline-block;
+    padding: 4px 6px;
+    color: #555;
+    vertical-align: middle;
+    border-radius: 4px;
+    max-width: 100%;
+    line-height: 22px;
+    cursor: text;
+}
+
+.bootstrap-tagsinput input {
+    border: none;
+    box-shadow: none;
+    outline: none;
+    background-color: transparent;
+    padding: 0 6px;
+    margin: 0;
+    width: auto;
+    max-width: inherit;
+}
+
+.bootstrap-tagsinput.form-control input::-moz-placeholder {
+    color: #777;
+    opacity: 1;
+}
+
+.bootstrap-tagsinput.form-control input:-ms-input-placeholder {
+    color: #777;
+}
+
+.bootstrap-tagsinput.form-control input::-webkit-input-placeholder {
+    color: #777;
+}
+
+.bootstrap-tagsinput input:focus {
+    border: none;
+    box-shadow: none;
+}
+
+.bootstrap-tagsinput .tag {
+    margin-right: 2px;
+    color: white;
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"] {
+    margin-left: 8px;
+    cursor: pointer;
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"]:after {
+    content: "x";
+    padding: 0px 2px;
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"]:hover {
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.bootstrap-tagsinput .tag [data-role="remove"]:hover:active {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 
 @media screen and (max-width: 1020px) {
     .selected-referral-head-text {
         text-align: center;
     }
+
     .selected-referral-container {
         flex-direction: column;
         align-items: center;
     }
+
     .selected-referral-info {
         text-align: center;
         margin-left: 0;
     }
+
     .selected-referral-description {
         width: 100%;
+    }
+
+    .modal-container {
+        padding: 10px;
     }
 }
 
 @media screen and (max-width: 478px) {
     .selected-referral-link-butt-container {
         flex-direction: column;
-        align-items: center;
     }
+
     .selected-referral-link-button {
         margin-top: 10px !important;
     }

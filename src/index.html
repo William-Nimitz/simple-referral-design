@@ -25,14 +25,16 @@
           <span class="currenty">$</span>
           <span class="selected-referral-payout">0</span><sup>.00</sup>
         </h3>
-        <p class="h5">Referral Bonos</p>
+        <p class="h5">Referral Bonus</p>
         <p class="selected-referral-description">If you referral deposites $10.000 in to their Mercury account in the first 90days, you both earn $250</p>
         <p class="d-inline-flex selected-referral-link-butt-container">
-          <span class="badge rounded-pill bg-custom-primary text-gray selected-referral-link-wrapper">
+          <span class="bg-custom-primary text-gray selected-referral-link-wrapper">
             <span class="selected-referral-link">mercury.com/r/macrofit-inc</span>
             <span class="ms-1">🔗</span>
           </span>
-          <span class="badge rounded-pill bg-primary selected-referral-link-button">invite via Email</span>
+          <span class="bg-primary selected-referral-link-button">
+            invite via Email
+          </span>
         </p>
       </div>
     </div>
@@ -61,6 +63,68 @@
         </thead>
         <tbody></tbody>
       </table>
+    </div>
+  </div>
+  <!-- The Modal -->
+  <div class="modal fade" id="confirm-modal">
+    <div class="modal-dialog modal-lg modal-fullscreen-lg-down">
+      <div class="modal-content modal-container">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Share your Mercury Referral</h4>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body modal-container">
+          <div class="modal-selected-referral-send-to">
+            <p class="h5 mb-0 modal-send-to-label text-gray mb-2">Send to</p>
+            <div class="modal-selected-referral-send-to-container">
+              <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput" />
+            </div>
+          </div>
+          <div class="modal-selected-referral-preview mt-4">
+            <p class="h5 mb-0 modal-preview-label text-gray mb-2">Preview</p>
+            <div class="modal-selected-referral-preview-container">
+              <div class="modal-selected-referral-preview-body">
+                <p class="modal-selected-referral-preview-title h2 mb-4">
+                  Michael DeVerna invited you to join Mercury
+                </p>
+                <p class="modal-selected-referral-preview-description h4 mb-4 text-gray">
+                  Michael DeVerna from <strong>MacroFit, Inc.</strong> uses Mercury to manage money for their business and thought you might want to try it too.
+                </p>
+                <div class="modal-selected-referral-preview-info">
+                  <div class="modal-selected-referral-preview-payout-wrapper">
+                    <h3 class="selected-referral-price">
+                      <span class="currenty">$</span>
+                      <span class="modal-selected-referral-payout">250</span><sup>.00</sup>
+                    </h3>
+                    <p class="h5 referral-bonus-border-bottom">Referral Bonus</p>
+                    <p class="modal-selected-referral-description">If you referral deposites $10.000 in to their Mercury account in the first 90days, you both earn $250</p>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-selected-referral-preview-from">
+                <div class="modal-selected-referral-preview-from-email d-flex">
+                  <p class="h6 me-1">From:</p>
+                  <p>hello@mercury.com</p>
+                </div>
+                <div class="modal-selected-referral-preview-from-subject d-flex">
+                  <p class="h6 me-1">Subject:</p>
+                  <p>You've been invited to Mercury</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn border-badge bg-custom-light-primary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary border-badge" data-bs-dismiss="modal">Confirm</button>
+        </div>
+
+      </div>
     </div>
   </div>
   <script src="./assets/js/index.js"></script>
