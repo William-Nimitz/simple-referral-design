@@ -326,10 +326,11 @@
             }, 100000000000000);
 
             Referrals.initializeToolTip();
+            Referrals.initializeTagInputs();
+
             $(document).on("click", ".referrals-table table tbody tr", Referrals.selectReferral);
             $(document).on("click", ".selected-referral-link-button", Referrals.confirmReferral);
             $(document).on("click", ".selected-referral-link-wrapper", Referrals.copyLinkToClipboard);
-            $(document).on("click", ".remove-email-from-share", Referrals.removeEmailFromShare);
         },
 
         selectReferral: function(e) {
@@ -352,11 +353,6 @@
             };
             const confirmModal = new bootstrap.Modal(document.getElementById('confirm-modal'), options);
             confirmModal.show()
-        },
-
-        removeEmailFromShare: function(e) {
-            const removed = $(this).closest(".send-to");
-            removed.remove();
         },
 
         copyLinkToClipboard: async function(e) {
@@ -384,6 +380,19 @@
             // const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
             //     return new bootstrap.Tooltip(tooltipTriggerEl);
             // });
+        },
+
+        initializeTagInputs: function() {
+            const tagInput1 = new tagsInput({
+                selector: '.selected-referral-send-to-send-to',
+                duplicate: false,
+                max: null
+            });
+        },
+
+        addEmailToShare: function(e) {
+            console.log(e.target.value);
+            console.log($(this).val())
         }
     };
     
