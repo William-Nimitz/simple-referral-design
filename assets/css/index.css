@@ -1,0 +1,312 @@
+:root {
+    --black: #000000;
+    --gray: #808080;
+    --gray-1: #909090;
+    --bg-white: #ffffff;
+    --bg-primary: #d2d5ed;
+    --bg-light-primary: #dee1f2a3;
+    --bg-white-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.bg-custom-primary {
+    background-color: var(--bg-primary);
+}
+
+.bg-custom-light-primary {
+    background-color: var(--bg-light-primary) !important;
+}
+
+.text-gray {
+    color: var(--gray-1) !important;
+}
+
+/* skeleton  */
+.skeleton-container {
+    pointer-events: none;
+}
+
+.skeleton-row {
+    display: flex;
+    align-items: end;
+}
+
+.skeleton-image {
+    width: 20px;
+    height: 20px;
+    background-color: #ccc;
+    margin-right: 10px;
+}
+
+.skeleton-text {
+    height: 15px;
+    background-color: #ccc;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+/* Add some animation to make the skeleton screen feel more dynamic */
+@keyframes loading {
+    0% {
+        background-color: #ccc;
+    }
+
+    50% {
+        background-color: #ddd;
+    }
+
+    100% {
+        background-color: #ccc;
+    }
+}
+
+.skeleton {
+    animation: loading 2s infinite;
+    border-radius: 2px;
+}
+
+.loading-alert {
+    position: absolute !important;
+    text-align: center;
+    background-color: var(--bg-white) !important;
+    box-shadow: var(--bg-white-shadow);
+    top: calc(250px);
+    left: calc((100% - 349px) / 2);
+}
+
+.loading-alert p.loading-alert-decs {
+    color: var(--gray);
+}
+
+/* selected-referral */
+.selected-referral-logo {
+    width: 200px;
+    height: 200px;
+    border-radius: 8px;
+}
+
+/* referrals-table */
+.referrals-table {
+    position: relative;
+}
+
+.referrals-table table {
+    min-width: 700px;
+}
+
+.referrals-table table tbody tr {
+    cursor: pointer;
+}
+
+.referrals-table table thead tr th,
+.referrals-table table tbody tr td {
+    font-size: 16px;
+    color: var(--gray);
+}
+
+.company-info {
+    width: 65%;
+}
+
+.company-status {
+    width: 10%;
+}
+
+.company-payout {
+    width: 25%;
+}
+
+.company-info-wrapper {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.company-info-logo {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.compamy-info-name {
+    margin-bottom: 0;
+}
+
+.compamy-info-name.skeleton {
+    width: 300px;
+}
+
+.compamy-info-status.skeleton {
+    width: 40px;
+}
+
+.compamy-info-payout.skeleton {
+    width: 100px;
+}
+
+.company-payout-symbol {
+    font-size: 24px;
+}
+
+.selected-referral-description {
+    color: var(--gray);
+    width: 65%;
+}
+
+.selected-referral-price sup {
+    font-size: 18px;
+    top: -7px;
+}
+
+.selected-referral-link-wrapper {
+    font-size: 16px !important;
+    padding: 7px 20px 7px 20px;
+    border-radius: 50rem;
+    cursor: pointer;
+}
+
+.selected-referral-info {
+    margin-left: 1.5rem;
+}
+
+.selected-referral-link-button {
+    font-size: 18px !important;
+    border-radius: 50rem;
+    padding: 10px 20px 10px 20px !important;
+    margin-left: 10px !important;
+    margin-top: 0;
+    cursor: pointer;
+    color: white;
+}
+
+/* modal sectioin  */
+.modal-header {
+    border-bottom: none !important;
+}
+
+.modal-container {
+    padding: 50px;
+}
+
+.modal-selected-referral-send-to-container {
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.send-to {
+    font-size: 16px !important;
+    padding-bottom: 5px !important;
+    color: darkgray !important;
+}
+
+.modal-selected-referral-preview-container {
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+.remove-email-from-share {
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.modal-selected-referral-preview-body {
+    padding: 40px 40px 30px 40px;
+}
+
+.modal-selected-referral-preview-info {
+    background-color: var(--bg-primary);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.selected-referral-link-butt-container {
+    align-items: center;
+}
+
+.referral-bonus-border-bottom {
+    padding-bottom: 20px;
+    border-bottom: 1px solid gray;
+}
+
+.modal-selected-referral-preview-from {
+    background-color: var(--bg-light-primary);
+    border-radius: 0 0 10px 10px;
+    padding: 15px 20px 15px 20px;
+}
+
+.modal-selected-referral-preview-from-email p,
+.modal-selected-referral-preview-from-subject p {
+    margin-bottom: 0;
+}
+
+.modal-footer {
+    margin-top: none !important;
+}
+
+.border-badge {
+    border-radius: 50rem !important;
+}
+
+/* tag input  */
+.tags-input-wrapper {
+    width: 100%;
+}
+
+.tags-input-wrapper input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.tags-input-wrapper .tag {
+    display: inline-block;
+    background-color: var(--bg-light-primary);
+    color: var(--gray);
+    border-radius: 40px;
+    padding: 0px 3px 0px 7px;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.tags-input-wrapper .tag a {
+    margin: 0 7px 3px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1020px) {
+    .selected-referral-head-text {
+        text-align: center;
+    }
+
+    .selected-referral-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .selected-referral-info {
+        text-align: center;
+        margin-left: 0;
+    }
+
+    .selected-referral-description {
+        width: 100%;
+    }
+
+    .modal-container {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 478px) {
+    .selected-referral-link-butt-container {
+        flex-direction: column;
+    }
+
+    .selected-referral-link-button {
+        margin-top: 10px !important;
+    }
+}
