@@ -6,127 +6,442 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link>
-  <title>Referrals</title>
-  <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <title>Deadlift</title>
+  <link rel="stylesheet" type="text/css" href="./assets/css/index.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script src="./assets/js/tagsinput.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 </head>
 
 <body>
-  <div class="container mt-4">
-    <p class="h4 selected-referral-head-text">Referrals</p>
-    <div class="selected-referral-container d-flex mt-4 justify-content-start align-content-end">
-      <div class="selected-referral-logo">
-        <img src="./assets/img/gift.png" alt="1" class="img-fluid">
+  <div class="container mt-5">
+    <div class="d-flex justify-content-between align-items-center logo-search-field">
+      <div>
+        <img src="./assets/img/logos/logo.svg" alt="Deadlift Logo" class="img-fluid logo-img">
       </div>
-      <div class="me-auto selected-referral-info">
-        <h3 class="selected-referral-price">
-          <span class="currenty">$</span>
-          <span class="selected-referral-payout">0</span><sup>.00</sup>
-        </h3>
-        <p class="h5">Referral Bonus</p>
-        <p class="selected-referral-description">If you referral deposites $10.000 in to their Mercury account in the first 90days, you both earn $250</p>
-        <p class="d-inline-flex selected-referral-link-butt-container">
-          <span class="bg-custom-primary text-gray selected-referral-link-wrapper">
-            <span class="selected-referral-link">mercury.com/r/macrofit-inc</span>
-            <span class="ms-1">🔗</span>
-          </span>
-          <span class="bg-primary selected-referral-link-button">
-            invite via Email
-          </span>
-        </p>
+      <div class="search-field-wrapper">
+        <input type="text" class="form-control font-inter-small-light search-field" placeholder="Search exercises">
+        <i class="fa fa-search"></i>
+      </div>
+    </div>
+    <div class="custom-mt-40 company-intro-video">
+      <div class="iframe-wrapper">
+        <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
       </div>
     </div>
   </div>
-  <div class="container mt-3">
-    <div class="referrals-table table-responsive">
-      <table class="table">
-        <thead>
-          <tr>
-            <th class="company-info">Company</th>
-            <th class="company-status">Status</th>
-            <th class="company-payout">
-              <span class="company-payout-symbol">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
-                  <g id="Dollar">
-                    <g>
-                      <path d="M12,21.934A9.934,9.934,0,1,1,21.934,12,9.945,9.945,0,0,1,12,21.934ZM12,3.066A8.934,8.934,0,1,0,20.934,12,8.944,8.944,0,0,0,12,3.066Z"></path>
-                      <path d="M14.5,13.5a2.006,2.006,0,0,1-2,2v1.01a.5.5,0,0,1-1,0V15.5H10.25a.5.5,0,0,1,0-1H12.5a1,1,0,0,0,0-2h-1a2,2,0,0,1,0-4V7.49a.5.5,0,0,1,1,0V8.5h1.25a.5.5,0,0,1,0,1H11.5a1,1,0,0,0,0,2h1A2.006,2.006,0,0,1,14.5,13.5Z"></path>
-                    </g>
-                  </g>
-                </svg>
-              </span>
-              <span>Referral payout</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody></tbody>
-      </table>
+
+  <div class="container mt-sm-5 mt-3">
+    <div class="deadlift mb-2 mb-sm-3">
+      <p class="font-inter-larger-normal mb-0">Deadlift</p>
     </div>
-  </div>
-  <!-- The Modal -->
-  <div class="modal fade" id="confirm-modal">
-    <div class="modal-dialog modal-lg modal-fullscreen-lg-down">
-      <div class="modal-content modal-container">
-
-        <!-- Modal Header -->
-        <div class="modal-header">
-          <h4 class="modal-title">Share your Mercury Referral</h4>
-        </div>
-
-        <!-- Modal body -->
-        <div class="modal-body modal-container">
-          <div class="modal-selected-referral-send-to">
-            <p class="h5 mb-0 modal-send-to-label text-gray mb-2">Send to</p>
-            <div class="modal-selected-referral-send-to-container">
-              <input type="text" class="selected-referral-send-to-send-to"></input>
-            </div>
-          </div>
-          <div class="modal-selected-referral-preview mt-4">
-            <p class="h5 mb-0 modal-preview-label text-gray mb-2">Preview</p>
-            <div class="modal-selected-referral-preview-container">
-              <div class="modal-selected-referral-preview-body">
-                <p class="modal-selected-referral-preview-title h2 mb-4">
-                  Michael DeVerna invited you to join Mercury
-                </p>
-                <p class="modal-selected-referral-preview-description h4 mb-4 text-gray">
-                  Michael DeVerna from <strong>MacroFit, Inc.</strong> uses Mercury to manage money for their business and thought you might want to try it too.
-                </p>
-                <div class="modal-selected-referral-preview-info">
-                  <div class="modal-selected-referral-preview-payout-wrapper">
-                    <h3 class="selected-referral-price">
-                      <span class="currenty">$</span>
-                      <span class="modal-selected-referral-payout">250</span><sup>.00</sup>
-                    </h3>
-                    <p class="h5 referral-bonus-border-bottom">Referral Bonus</p>
-                    <p class="modal-selected-referral-description">If you referral deposites $10.000 in to their Mercury account in the first 90days, you both earn $250</p>
-                  </div>
-                </div>
-              </div>
-              <div class="modal-selected-referral-preview-from">
-                <div class="modal-selected-referral-preview-from-email d-flex">
-                  <p class="h6 me-1">From:</p>
-                  <p>hello@mercury.com</p>
-                </div>
-                <div class="modal-selected-referral-preview-from-subject d-flex">
-                  <p class="h6 me-1">Subject:</p>
-                  <p>You've been invited to Mercury</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Modal footer -->
-        <div class="modal-footer">
-          <button type="button" class="btn border-badge bg-custom-light-primary" data-bs-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary border-badge" data-bs-dismiss="modal">Confirm</button>
-        </div>
-
+    <div class="tags d-flex justify-content-start align-items-center">
+      <div class="d-inline-flex badge rounded-pill justify-content-center align-items-center">
+        <img src="./assets/img/icons/man.svg" alt="Whole body" class="img-fluid">
+        <p class="mb-0 ms-2 font-inter-small-bold-short">Whole body</p>
+      </div>
+      <div class="d-inline-flex badge rounded-pill justify-content-center align-items-center">
+        <img src="./assets/img/icons/fitness.svg" alt="Olympic lifts" class="img-fluid">
+        <p class="mb-0 ms-2 font-inter-small-bold-short">Olympic lifts</p>
+      </div>
+      <div class="d-inline-flex badge rounded-pill justify-content-center align-items-center">
+        <img src="./assets/img/icons/bodypart.svg" alt="Back" class="img-fluid">
+        <p class="mb-0 ms-2 font-inter-small-bold-short">Back</p>
       </div>
     </div>
+  </div>
+
+  <div class="workout-description-comments-cautions container">
+    <div class="workout-description pb-3">
+      <div class="workout-description-block-1">
+        <p class="font-inter-xlarge-bold">Starting Posture</p>
+        <div class="font-inter-medium-normal">
+          <p>Stand with feet hip-width apart and the barbell on the ground in front of your feet.</p>
+          <p>Bend your hips and knees to lower your body towards the bar, while keeping your back flat.</p>
+          <p>Grip the barbell with an overhand grip, slightly wider than shoulder-width apart.</p>
+          <p>Push your chest forward and look slightly up.</p>
+        </div>
+      </div>
+      <div class="workout-description-block-2">
+        <p class="font-inter-xlarge-bold">How to Exercise</p>
+        <div class="font-inter-medium-normal">
+          <p>Take a deep breath and brace your core.</p>
+          <p>Lift the barbell by driving your feet through the ground and extending your hips and knees until you are standing upright.</p>
+          <p>Keep the bar close to your body and your arms straight.</p>
+          <p>Once you have reached the top, hold the position for a moment.</p>
+        </div>
+      </div>
+      <div class="workout-description-block-3">
+        <p class="font-inter-xlarge-bold">Breath Control</p>
+        <div class="font-inter-medium-normal">
+          <p>Take a deep breath before you start the lift.</p>
+          <p>Exhale as you lift the barbell.</p>
+          <p>Inhale at the top of the lift.</p>
+        </div>
+      </div>
+      <div class="workout-description-block-4 mt-3">
+        <p class="font-inter-xlarge-bold">Common errors</p>
+        <div class="font-inter-medium-normal">
+          <p>There are a few common errors during the performance of the deadlift. Protracting the shoulders disengages the back muscles which stabilize the spine. Slack should be taken from the bar prior to the lift, by squeezing the back muscles first and straightening the arms; the bar should then be lifted in a smooth motion without jerking. As the objective of a deadlift is to hinge the hips, the knees should not be bent so deeply as to form a <a href="#squat" class="book-mark-link">squat</a>. If the bar is too far from the lifter, the lifter may compensate by rounding the back or shifting the weight to the front of the foot. Both result in shifting which muscles are used and could cause injury. Rounding the back in general is controversial; it is often recommended that during the lift, the back is flat with a spine neutral. Some lifters prefer to slightly round their back; but an excessively rounded back may result in the load being lifted awkwardly and placing too much stress or pressure on the back, which may lead to injury. The knees should be bent more fully on the descent of the bar to preserve a neutral spine</p>
+        </div>
+      </div>
+      <div class="workout-description-block-5">
+        <p class="font-inter-xlarge-bold">Weights</p>
+        <div class="font-inter-medium-normal">
+          <p class="mb-3">Deadlifts can be performed using dumbbells, barbells, or kettlebells with one hand or two hands, and with one leg or two legs. Other variations are the side deadlift or suitcase deadlift, rack pulls, deadlift lockouts, deficit deadlift or deadlift from a box (pulling from the floor while standing on a built or <a href="#improvised-low-platform" class="book-mark-link">improvised low platform</a>).</p>
+          <p>Each of these variations is called for to address specific weaknesses in a lifter's overall deadlift. For instance, if the athlete has difficulty breaking contact at max weight, deficit deadlifts are performed to strengthen the gluteus maximus and hamstrings due to the greater range of motion required by standing on the low platform or low box. On the other hand, if the lifter has no problem with breaking contact with the floor but has difficulty locking out, they should perform rack pulls to strengthen their upper back, posterior deltoids, and trapezius muscles while de-emphasizing the gluteus and hamstrings.</p>
+        </div>
+      </div>
+      <div class="workout-description-block-6">
+        <p class="font-inter-xlarge-bold">Grips</p>
+        <div class="font-inter-medium-normal">
+          <p class="mb-3">Typically, there are three grips used: overhand (pronated), a mixed overhand-underhand (supinated) (sometimes called "offset," "staggered," "alternating", or "mixed") grip, or a hook grip. Depending on forearm strength, the overhand grip may result in the bar potentially rolling about. Mixed grip is capable of neutralizing this through the "physics of reverse torsion." The mixed grip allows more weight to be held for this reason.</p>
+          <p>In order to prevent the bar from rolling out of the hands, some lifters have been known to use an <a href="#olympic-weightlifting" class="book-mark-link">Olympic weightlifting</a> technique known as the <a href="#hook-grip" class="book-mark-link">hook grip</a>. This is similar to an overhand grip, but the thumbs are inside, allowing the lifter to "hook" onto them with the fingers. The hook grip can make it easier to hold heavier weights using less grip strength, and keeps both shoulders and elbows in a symmetrical position. While it theoretically takes much of the stress off the joints which might be created by the twisting of a mixed grip, it has the disadvantage of being extremely uncomfortable for the thumbs, something which those who advocate it says will pass once a lifter becomes accustomed to it. Another, but rarely used method is a combination of the mixed overhand-underhand grip and the hook grip, preferred by people who lift heavier weights than their grip can handle, but who don't want to rely on lifting straps or other supportive gear.</p>
+        </div>
+      </div>
+      <div class="workout-description-block-7">
+        <p class="font-inter-xlarge-bold">Deadlift variations</p>
+        <div class="font-inter-medium-normal">
+          <p>There are numerous variations of the deadlift.</p>
+          <div class="mb-3">
+            <p class="font-inter-medium-bold mb-1">Partial deadlift</p>
+            <p>This is where the range of movement (ROM) of the lift is reduced in order to train a particular part of it. Usually, this involves lifting from a higher starting position. This may be facilitated through the use of blocks or pins in a power rack. When considered in regard to the ROM of a normal deadlift, this means that the lift begins in a higher and <a link="#stronger-phase" class="book-mark-link">stronger phase</a>, avoids a lower and weaker phase, and thereby allows for more weight to be lifted. This can lead to increased <a link="#strength-gains" class="book-mark-link">strength gains</a>. A partial repetition deadlift may also only involve working in the lower weaker phase, in order to improve the amount if strength that can be applied there and help to overcome any sticking points</p>
+          </div>
+          <div class="mb-3">
+            <p class="font-inter-medium-bold mb-1">Single leg deadlift</p>
+            <p>This is a deadlift where one foot is on the ground and the other is raised. The grounded leg is primarily used to lift the weight and power the movement. The raised leg is roughly parallel with the straight grounded leg when the weight is lifted, and moves behind when the weight is lowered and the person bends over. As a unilateral, single leg exercise, it utilises the hips more so than if it was performed in a bilateral manner. It also means that the balance and core stability requirements are increased and this can lead to improvements in this regard.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="comments-cautions">
+      <div class="comments-tips">
+        <div class="comments-cautions-header d-inline-flex justify-content-start align-items-center mb-2">
+          <i class="fa fa-comment me-3"></i>
+          <p class="font-inter-large-bold mb-0">Comments and tips</p>
+        </div>
+        <p class="font-inter-small-normal">It is a good workout for your back muscle development, as the muscles in the back of your body can be highly involved while withstanding heavy weights. It is a crucial workout if you want to have perfect back muscles!</p>
+      </div>
+      <div class="cautions">
+        <div class="comments-cautions-header d-inline-flex justify-content-start align-items-center mb-2">
+          <i class="fa fa-exclamation-triangle me-3"></i>
+          <p class="font-inter-large-bold mb-0">Cautions</p>
+        </div>
+        <div class="font-inter-small-normal custom-ol">
+          <p class="custom-li">Keep your back flat and your core engaged throughout the entire lift.</p>
+          <p class="custom-li">Do not round your back or use momentum to lift the barbell.</p>
+          <p class="custom-li">Avoid jerking or bouncing the weight off the ground.</p>
+          <p class="custom-li">Make sure to use a weight that is appropriate for your level.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="bg-gray-wrapper">
+    <div class="container generate-sample-workout">
+      <div class="generate-workout">
+        <p class="generate-workout-title font-inter-xxlarge-normal-longer mb-sm-3 mb-2">Generate a workout for using deadlifts</p>
+        <p class="generate-workout-desc font-inter-medium-normal mb-sm-4 mb-3">Vivamus massa eros, mollis vel pellentesque et, tincidunt ut mauris. Suspendisse vehicula, felis vulputate sodales sodales, libero purus fermentum elit, eu scelerisque nibh dolor at metus.Vivamus massa eros, mollis vel pellentesque et, tincidunt ut mauris.</p>
+        <button class="btn generate-workout-butt">
+          <span class="font-inter-small-bold-short me-2">Generate a workout</span>
+          <i class="fa fa-arrow-right"></i>
+        </button>
+      </div>
+      <div class="sample-workout">
+        <p class="font-inter-xlarge-bold mb-4">Sample workouts with this movement</p>
+        <div class="swiper sample-workout-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="iframe-wrapper">
+                  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Workout 1</p>
+                <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 1</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="iframe-wrapper">
+                  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Workout 2</p>
+                <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 2</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="iframe-wrapper">
+                  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Workout 3</p>
+                <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 3</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="iframe-wrapper">
+                  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Workout 4</p>
+                <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 4</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="iframe-wrapper">
+                  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Workout 5</p>
+                <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 5</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="iframe-wrapper">
+                  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Workout 6</p>
+                <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 6</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="iframe-wrapper">
+                  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Workout 7</p>
+                <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 7</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="iframe-wrapper">
+                  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Workout 8</p>
+                <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 8</p>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <div class="iframe-wrapper">
+                  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+                </div>
+                <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Workout 9</p>
+                <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 9</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container programs">
+    <div class="programs-action">
+      <p class="font-inter-xxlarge-normal-longer">Fit! Programs featuring this exercise</p>
+      <div class="programs-action-navigation">
+        <p class="programs-swiper-prev">&lt;</p>
+        <p class="programs-swiper-next">&gt;</p>
+      </div>
+    </div>
+    <div class="swiper programs-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="swiper-card">
+            <img src="./assets/img/programs/program-1.png" alt="Program 1" class="img-fluid">
+            <div class="programs-swiper-desc">
+              <p class="programs-swiper-desc-title font-inter-large-bold mb-1 mt-4 sample-workout-title text-left">FlagFit</p>
+              <p class="programs-swiper-desc-subtitle font-inter-small-normal mb-0 sample-workout-desc">Kyrie Fontana</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-card">
+            <img src="./assets/img/programs/program-2.png" alt="Program 2" class="img-fluid">
+            <div class="programs-swiper-desc">
+              <p class="programs-swiper-desc-title font-inter-large-bold mb-1 mt-4 sample-workout-title text-left">Project Calisthenics</p>
+              <p class="programs-swiper-desc-subtitle font-inter-small-normal mb-0 sample-workout-desc">Simon Ata</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-card">
+            <img src="./assets/img/programs/program-3.png" alt="Program 3" class="img-fluid">
+            <div class="programs-swiper-desc">
+              <p class="programs-swiper-desc-title font-inter-large-bold mb-1 mt-4 sample-workout-title text-left">Mobility for athletes</p>
+              <p class="programs-swiper-desc-subtitle font-inter-small-normal mb-0 sample-workout-desc">John Lindsey</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-card">
+            <img src="./assets/img/programs/program-4.png" alt="Program 4" class="img-fluid">
+            <div class="programs-swiper-desc">
+              <p class="programs-swiper-desc-title font-inter-large-bold mb-1 mt-4 sample-workout-title text-left">Planche Fit!</p>
+              <p class="programs-swiper-desc-subtitle font-inter-small-normal mb-0 sample-workout-desc">Gregoire Bellemare</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-card">
+            <img src="./assets/img/programs/program-1.png" alt="Program 1" class="img-fluid">
+            <div class="programs-swiper-desc">
+              <p class="programs-swiper-desc-title font-inter-large-bold mb-1 mt-4 sample-workout-title text-left">FlagFit</p>
+              <p class="programs-swiper-desc-subtitle font-inter-small-normal mb-0 sample-workout-desc">Kyrie Fontana</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-card">
+            <img src="./assets/img/programs/program-2.png" alt="Program 2" class="img-fluid">
+            <div class="programs-swiper-desc">
+              <p class="programs-swiper-desc-title font-inter-large-bold mb-1 mt-4 sample-workout-title text-left">Project Calisthenics</p>
+              <p class="programs-swiper-desc-subtitle font-inter-small-normal mb-0 sample-workout-desc">Simon Ata</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-card">
+            <img src="./assets/img/programs/program-3.png" alt="Program 3" class="img-fluid">
+            <div class="programs-swiper-desc">
+              <p class="programs-swiper-desc-title font-inter-large-bold mb-1 mt-4 sample-workout-title text-left">Mobility for athletes</p>
+              <p class="programs-swiper-desc-subtitle font-inter-small-normal mb-0 sample-workout-desc">John Lindsey</p>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="swiper-card">
+            <img src="./assets/img/programs/program-4.png" alt="Program 4" class="img-fluid">
+            <div class="programs-swiper-desc">
+              <p class="programs-swiper-desc-title font-inter-large-bold mb-1 mt-4 sample-workout-title text-left">Planche Fit!</p>
+              <p class="programs-swiper-desc-subtitle font-inter-small-normal mb-0 sample-workout-desc">Gregoire Bellemare</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bg-gray-wrapper">
+    <div class="container related-exercises">
+      <div class="related-exercises-action d-flex justify-content-between">
+        <p class="font-inter-xxlarge-normal-longer">Related Exercises</p>
+        <div class="related-exercises-action-navigation d-flex justify-content-between">
+          <p class="related-exercises-swiper-prev">&lt;</p>
+          <p class="related-exercises-swiper-next">&gt;</p>
+        </div>
+      </div>
+      <div class="swiper related-exercises-swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+              <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Exercise 1</p>
+              <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 1</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+              <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Exercise 2</p>
+              <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 2</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+              <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Exercise 3</p>
+              <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 3</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+              <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Exercise 4</p>
+              <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 4</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+              <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Exercise 5</p>
+              <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 5</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+              <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Exercise 6</p>
+              <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 6</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+              <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Exercise 7</p>
+              <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 7</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+              <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Exercise 8</p>
+              <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 8</p>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-card">
+              <div class="iframe-wrapper">
+                <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
+              </div>
+              <p class="font-inter-large-bold mb-1 mt-sm-4 mt-3 sample-workout-title text-left">Exercise 9</p>
+              <p class="font-inter-small-normal mb-0 sample-workout-desc">Course name 9</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container footer">
+    <div class="footer-desc">
+      <div class="footer-desc-wrapper">
+        <p class="footer-desc-title">Workout anywhere! Access your workouts from any device</p>
+        <p class="footer-desc-subtitle">Train at home, at the park, in the gym... Literally anywhere! Access your complete library of workouts from your phone, tablet, Apple TV, or laptop via the Fit! app or web browser.</p>
+      </div>
+      <div class="footer-action">
+        <button class="btn" type="button">
+          <img src="./assets/img/icons/app_store.svg" alt="App Store" class="img-fluid me-2">
+        </button>
+        <button class="btn" type="button">
+          <img src="./assets/img/icons/google_play.png" alt="Google Play" class="img-fluid me-2">
+        </button>
+      </div>
+    </div>
+    <div class="footer-img">
+      <img src="./assets/img/footer.png" alt="Footer" class="img-fluid">
+    </div>
+    <div class="footer-code">Fit! (c) 2023</div>
   </div>
   <script src="./assets/js/index.js"></script>
 </body>
