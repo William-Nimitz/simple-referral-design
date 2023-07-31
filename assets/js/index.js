@@ -10,7 +10,7 @@
         intializeSwiper: function(e) {
           const sampleWorkoutSwiper = new Swiper(".sample-workout-swiper", {
             slidesPerView: "auto",
-            slidesPerView: 1,
+            slidesPerView: 1.5,
             spaceBetween: 10,
             // Responsive breakpoints
             breakpoints: {
@@ -28,7 +28,7 @@
           });
 
           const programsSwiper = new Swiper(".programs-swiper", {
-            slidesPerView: 1,
+            slidesPerView: 1.5,
             spaceBetween: 20,
             // Responsive breakpoints
             breakpoints: {
@@ -58,15 +58,18 @@
             spaceBetween: 10,
             // Responsive breakpoints
             breakpoints: {
-              // when window width is >= 576px
-              576: {
+              // when window width is >= 320px
+              768: {
                 slidesPerView: 2,
                 spaceBetween: 20
               },
-              // when window width is >= 1400px
+              1200: {
+                slidesPerView: 3,
+                spaceBetween: 20
+              },
               1400: {
                 slidesPerView: 4,
-                spaceBetween: 30
+                spaceBetween: 20
               }
             },
             navigation: {

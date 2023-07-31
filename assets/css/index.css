@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 :root {
     --white-1: #FFFFFF;
     --gray-1: #ECECEC;
@@ -13,7 +15,7 @@
 }
 
 .font-inter-small-light {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 16px !important;
     font-weight: 400 !important;
     line-height: 150% !important;
@@ -21,7 +23,7 @@
 }
 
 .font-inter-small-normal {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 16px !important;
     font-weight: 500 !important;
     line-height: 150% !important;
@@ -29,7 +31,7 @@
 }
 
 .font-inter-small-bold-short {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 16px !important;
     font-weight: 600 !important;
     line-height: 150% !important;
@@ -37,7 +39,7 @@
 }
 
 .font-inter-small-bold-longer {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 16px !important;
     font-weight: 600 !important;
     line-height: 200% !important;
@@ -45,7 +47,7 @@
 }
 
 .font-inter-medium-light {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 18px !important;
     font-weight: 400 !important;
     line-height: 150% !important;
@@ -53,7 +55,7 @@
 }
 
 .font-inter-medium-normal {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 18px !important;
     font-weight: 500 !important;
     line-height: 150% !important;
@@ -61,7 +63,7 @@
 }
 
 .font-inter-medium-bold {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 18px !important;
     font-weight: 700 !important;
     line-height: 150% !important;
@@ -69,7 +71,7 @@
 }
 
 .font-inter-large-bold {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 24px !important;
     font-weight: 600 !important;
     line-height: 150% !important;
@@ -77,7 +79,7 @@
 }
 
 .font-inter-xlarge-bold {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 30px !important;
     font-weight: 600 !important;
     line-height: 150% !important;
@@ -85,7 +87,7 @@
 }
 
 .font-inter-xxlarge-normal-short {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 36px !important;
     font-weight: 500 !important;
     line-height: 150% !important;
@@ -93,7 +95,7 @@
 }
 
 .font-inter-xxlarge-normal-longer {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 36px !important;
     font-weight: 500 !important;
     line-height: 150% !important;
@@ -101,7 +103,7 @@
 }
 
 .font-inter-larger-normal {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 48px !important;
     font-weight: 500 !important;
     line-height: 150% !important;
@@ -248,7 +250,7 @@ body {
 }
 
 .workout-description .book-mark-link {
-    font-family: Inter;
+    font-family: 'Inter', Arial, sans-serif;
     font-size: 18px !important;
     font-weight: 700 !important;
     line-height: 32px !important;
@@ -434,6 +436,7 @@ body {
 }
 .related-exercises-action-navigation {
     color: var(--white-1);
+    display: flex;
 }
 .related-exercises-swiper .font-inter-large-bold {
     color: var(--white-1);
@@ -447,9 +450,47 @@ body {
 .related-exercises-action-navigation > p {
     font-size: 32px;
 }
-/* test css  */
-.cus-border {
-    border: 1px solid red;
+.related-exercises-swiper .swiper-card {
+    text-align: left;
+}
+.related-exercises-swiper .iframe-wrapper > iframe {
+    width: 285px;
+    height: 172px;
+    border-radius: 20px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-desc {
+    padding: 72px 0 166px 0;
+    max-width: 470px;
+}
+
+.footer-desc-wrapper {
+
+}
+
+.footer-desc-title {
+    color: var(--white-1);
+}
+
+.footer-desc-subtitle {
+    color: var(--gray-1);
+}
+.footer-action {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+.footer-code {
+    position: absolute;
+    left: 0;
+    bottom: 34px;
 }
 /* responsive  */
 @media screen and (max-width: 1400px) {
@@ -489,6 +530,30 @@ body {
     }
     .programs-action-navigation {
         display: none;
+    }
+    .related-exercises-swiper .font-inter-large-bold {
+        font-size: 18px !important;
+    }
+    .related-exercises-swiper .font-inter-small-normal {
+        font-size: 12px !important;
+    }
+
+    .related-exercises-action-navigation {
+        display: none !important;
+    }
+
+    .footer-desc {
+        padding: 32px 0 32px 0;
+    }
+    .footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-desc-title {
+        font-size: 24px !important;
+    }
+    .footer-desc-subtitle {
+        font-size: 12px !important;
     }
 }
 
