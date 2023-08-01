@@ -402,7 +402,6 @@ body {
 
 .programs-swiper > .swiper-wrapper > .swiper-slide > .swiper-card {
     width: 285px;
-    height: 400px;
     position: relative;
 }
 
@@ -430,7 +429,11 @@ body {
 .related-exercises {
     padding: 72px 0;
 }
-
+.related-exercises-action {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .related-exercises-action > p {
     color: var(--white-1);
 }
@@ -492,6 +495,32 @@ body {
     left: 0;
     bottom: 34px;
 }
+.programs .swiper-card > img {
+    transition: all 0.2s;
+}
+.programs .swiper-card > img:hover {
+    transform: scale(1.1);
+}
+.programs .swiper-card {
+    transition: all 0.2s;
+}
+.programs .swiper-card:hover > img {
+    opacity: 0.7;
+}
+
+.swiper-card > .iframe-wrapper > iframe {
+    transition: all 0.2s;
+}
+.swiper-card > .iframe-wrapper:hover > iframe {
+    opacity: 0.7;
+}
+.swiper-card > .iframe-wrapper > iframe {
+    transition: all 0.2s;
+}
+.swiper-card > .iframe-wrapper > iframe {
+    transform: scale(1.05);
+}
+
 /* responsive  */
 @media screen and (max-width: 1400px) {
     .comments-cautions {
@@ -532,12 +561,14 @@ body {
         display: none;
     }
     .related-exercises-swiper .font-inter-large-bold {
-        font-size: 18px !important;
+        font-size: 14px !important;
     }
     .related-exercises-swiper .font-inter-small-normal {
         font-size: 12px !important;
     }
-
+    .related-exercises-action {
+        justify-content: center !important;
+    }
     .related-exercises-action-navigation {
         display: none !important;
     }
@@ -652,13 +683,19 @@ body {
     }
 
     .sample-workout p.font-inter-xlarge-bold {
-        font-size: 16px !important;
+        font-size: 20px !important;
     }
     .sample-workout-swiper .font-inter-large-bold {
         font-size: 14px !important;
     }
     .sample-workout-swiper .font-inter-small-normal {
         font-size: 12px !important;
+    }
+    .related-exercises-action > .font-inter-xxlarge-normal-longer {
+        font-size: 20px !important;
+    }
+    .programs-swiper > .swiper-wrapper > .swiper-slide > .swiper-card > img {
+        height: auto;
     }
 }
 
