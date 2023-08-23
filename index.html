@@ -23,7 +23,7 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
               <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse nav-bar-style">
+            <div class="collapse navbar-collapse nav-bar-style" id="collapsibleNavbar">
               <ul class="navbar-nav">
                 <li class="nav-item">
                   <a class="nav-link font-16-light-150-n1 font-col-white" href="#">About</a>
@@ -40,101 +40,130 @@
         </nav>
         <div class="hero-section-container">
           <div class="hero-section">
-            <div class="hero-section-title font-80-bolder-105-n1 font-col-white mb-3">Home gym</div>
-            <div class="hero-section-decs font-24-light-32p-n1 font-col-white mb-5">The most versatile and compact bodyweight gym.</div>
+            <div class="hero-section-title font-80-bolder-105-n1 font-col-white mb-1 mb-sm-3">Home gym</div>
+            <div class="hero-section-decs font-24-light-32p-n1 font-col-white mb-2 mb-sm-5">The most versatile and compact bodyweight gym.</div>
             <button class="hero-section-button custom-button font-18-bold-150 font-col-white">
               <span>ORDER NOW</span>
               <img src="./assets/img/icons/arrow-right.svg" alt="" />
             </button>
           </div>
         </div>
-        <div class="bot-section">
+      </div>
+      <div class="bot-section-background">
+        <div class="bot-section container">
           <div class="bot-section-part">
             <img src="./assets/img/icons/timer.svg" alt="" />
-            <div class="bot-section-part-title">Assemble in 60 seconds</div>
+            <div class="bot-section-part-title font-16-light-150-n1">Assemble in 60 seconds</div>
           </div>
           <div class="bot-section-part">
             <img src="./assets/img/icons/unlimited.svg" alt="" />
-            <div class="bot-section-part-title">Endless exercise options</div>
+            <div class="bot-section-part-title font-16-light-150-n1">Endless exercise options</div>
           </div>
           <div class="bot-section-part">
             <img src="./assets/img/icons/box.svg" alt="" />
-            <div class="bot-section-part-title">Easy break-down and storage</div>
+            <div class="bot-section-part-title font-16-light-150-n1">Easy break-down and storage</div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid intro-container re-11">
+  <div class="intro-container">
     <div class="intro-container-background">
-      <div class="intro-wrapper">
-        <p>The Fit! Home Gym starts with the patent-pending modular base design</p>
-        <p>It's high quality and extremely durable - engineered in the USA with a combination of wood and steel.</p>
-        <p>The steel bars included with the base can create a number of different setups from a full-sized pull-up bar to dip bars, pushup handles, and more. Assembly requires no tools and was made to be easy for anyone. The bars simply click into place using a spring latch.</p>
-        <button class="intro-section-button custom-button font-18-bold-150 font-col-white">
-          ORDER NOW
-        </button>
+      <div class="intro-wrapper container">
+        <div class="intro-content">
+          <p class="font-36-light-42p-n1 font-col-white">The Fit! Home Gym starts with the patent-pending modular base design</p>
+          <p class="font-16-light-150-n1 font-col-white">It's high quality and extremely durable - engineered in the USA with a combination of wood and steel.</p>
+          <p class="font-16-light-150-n1 font-col-white">The steel bars included with the base can create a number of different setups from a full-sized pull-up bar to dip bars, pushup handles, and more. Assembly requires no tools and was made to be easy for anyone. The bars simply click into place using a spring latch.</p>
+          <button class="intro-section-button custom-button font-18-bold-150 font-col-white">
+            ORDER NOW
+          </button>
+        </div>
       </div>
     </div>
   </div>
-  <div class="container-fluid setups-container re-10">
-    <div class="container">
-      <p>Our patented base design allows for a variety of setups</p>
+  <div class="container-fluid setups-container">
+    <div class="container text-center">
+      <p class="font-36-light-42p-n1 font-col-white setups-title">Our patented base design allows for a variety of setups</p>
       <div class="setups-gallery">
-        <div>
+        <div class="setups-gallery-part">
           <img src="./assets/img/setups/pullup.png" />
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="font-24-light-32p-n1 font-col-white">Pullup Bar</p>
+            <p class="font-16-light-150-n1 font-col-gray">Assembles in 30 seconds</p>
+          </div>
         </div>
-        <div>
+        <div class="setups-gallery-part">
           <img src="./assets/img/setups/pushup.png" />
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="font-24-light-32p-n1 font-col-white">Pushup Bars</p>
+            <p class="font-16-light-150-n1 font-col-gray">360°s of rotation</p>
+          </div>
         </div>
-        <div>
+        <div class="setups-gallery-part">
           <img src="./assets/img/setups/parallel.png" />
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="font-24-light-32p-n1 font-col-white">Parallel Bars</p>
+            <p class="font-16-light-150-n1 font-col-gray">Solid steel</p>
+          </div>
         </div>
-        <div>
+        <div class="setups-gallery-part">
           <img src="./assets/img/setups/bands.png" />
+          <div class="d-flex justify-content-between align-items-center">
+            <p class="font-24-light-32p-n1 font-col-white">Bands and Banded Barbell*</p>
+            <p class="font-16-light-150-n1 font-col-gray">*Sold separately</p>
+          </div>
         </div>
+      </div>
+      <button class="intro-section-button custom-button font-18-bold-150 font-col-white mb-5">
+        ORDER NOW
+      </button>
+    </div>
+  </div>
+  <div class="container-fluid easy-to-setup-container">
+    <div class="easy-to-setup-background">
+      <div class="easy-to-setup-content container">
+        <p class="font-36-light-42p-n1 font-col-white">Easy to setup</p>
+        <p class="font-16-light-150-n1 font-col-gray desc">It should take you less then a minute to go from one setup to the next. It's real simple. Every piece of the Home Gym simple clicks into place and unclicks when you're ready to take it apart. No tools are required.</p>
+      </div>
+    </div>
+  </div>
+  <div class="compact-container">
+    <div class="compact-content container text-center">
+      <div class="compact-content-wrapper">
+        <p class="compact-content-title font-36-bold-42p-n1">The most compact full-body gym on the market</p>
+        <p class="compact-content-desc font-16-light-150-n1">Our custom duffle bag which fits all of the attachment bars allowing easy transportation and storage is an optional add-on which can be purchased at checkout.</p>
+      </div>
+      <div class="compact-content-background">
+        <img src="./assets/img/background/compact-bg.gif" />
       </div>
       <button class="intro-section-button custom-button font-18-bold-150 font-col-white">
         ORDER NOW
       </button>
     </div>
   </div>
-  <div class="container-fluid easy-to-setup-container re-9">
-    <div class="easy-to-setup-background">
-      <div class="easy-to-setup-content">
-        <p>Eash to setup</p>
-        <p>It should take you less then a minute to go from one setup to the next. It's real simple. Every piece of the Home Gym simple clicks into place and unclicks when you're ready to take it apart. No tools are required.</p>
+  <div class="arrows-numbers-container re-test">
+    <div class="arrows-numbers-content">
+      <div class="arrows-numbers-background">
+        <img src="./assets/img/background/arrows-numbers-bg.svg" />
       </div>
+      <div class="arrows-numbers-6ft container">
+        <img src="./assets/img/background/arrow-6ft.svg" />
+      </div>
+      <!-- <div class="arrows-numbers-pullup-bar">
+        <img src="./assets/img/background/arrow-pullup-bar.png" />
+        <div class="">
+          <p>Pullup bar extension height:</p>
+          <p>82"</p>
+        </div>
+      </div> -->
     </div>
   </div>
-  <div class="container-fluid compact-container re-8">
-    <div class="easy-to-setup-background">
-      <div class="easy-to-setup-content">
-        <p>The most compact full-body gym on the market</p>
-        <p>Our custom duffle bag which fits all of the attachment bars allowing easy transportation and storage is an optional add-on which can be purchased at checkout.</p>
-      </div>
-    </div>
-    <button class="intro-section-button custom-button font-18-bold-150 font-col-white">
-      ORDER NOW
-    </button>
-  </div>
-  <div class="container-fluid arrows-numbers-container re-7">
-    <div class="easy-to-setup-background">
-      <div class="easy-to-setup-content">
-        <p>The most compact full-body gym on the market</p>
-        <p>Our custom duffle bag which fits all of the attachment bars allowing easy transportation and storage is an optional add-on which can be purchased at checkout.</p>
-      </div>
-    </div>
-    <button class="intro-section-button custom-button font-18-bold-150 font-col-white">
-      ORDER NOW
-    </button>
-  </div>
-  <div class="container-fluid mobile-app-container re-6">
+  <div class="container mobile-app-container">
     <div class="mobile-app-background">
       <div class="mobile-app-content">
         <div class="mobile-app-introduction">
-          <p>Included mobile app</p>
-          <p>Included with your purchase is access to the Fit! app where you can find an archive of over 100 different exercises to do on the Home Gym. The app pairs with Apple TV so you can get the full experience on the big screen right at home.</p>
+          <p class="font-col-white">Included mobile app</p>
+          <p class="font-col-white">Included with your purchase is access to the Fit! app where you can find an archive of over 100 different exercises to do on the Home Gym. The app pairs with Apple TV so you can get the full experience on the big screen right at home.</p>
         </div>
         <div class="mobile-app-images">
           <div class="mobile-app-images-container">
@@ -142,15 +171,24 @@
               <img src="./assets/img/mobile-images/tv.png" />
               <img src="./assets/img/mobile-images/ipad.png" />
             </div>
-            <div>
+            <div class="mobile-app-images-vertical">
               <img src="./assets/img/mobile-images/phone.png" />
             </div>
           </div>
         </div>
+        <div class="google-app-store">
+          <button>
+            <img src="./assets/img/icons/app-store.png" />
+          </button>
+          <button>
+            <img src="./assets/img/icons/google-play.png" />
+          </button>
+        </div>
       </div>
     </div>
+
   </div>
-  <div class="container-fluid gallery-container re-5">
+  <div class="gallery-container re-5">
     <div class="gallery-imgs">
       <div>
         <img src="./assets/img/gallery/gallery1.png" />
@@ -184,7 +222,7 @@
       <p>Home Gym gallery</p>
       <p>See more photos and videos from us and our customers! Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce semper efficitur orci. Etiam at tortor mauris. Proin sed ornare sem. Sed non tincidunt massa.</p>
       <button class="intro-section-button custom-button font-18-bold-150 font-col-white">
-        ORDER NOW
+        VIEW GALLERY
       </button>
     </div>
   </div>
@@ -217,7 +255,7 @@
   </div>
   <div class="container-fluid cta-container re-2">
   </div>
-  <div class="container-fluid footer-container re-1">
+  <div class="container footer-container">
   </div>
   <script src="./assets/js/index.js"></script>
 </body>
