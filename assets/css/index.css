@@ -2,6 +2,10 @@
 
 :root {
     --white-1: #FFFFFFE5;
+    --white-2: #FFFFFF;
+    --white-4: #FFFFFF1A;
+    --white-5: #FFFFFF4D;
+    --base: #FF6716;
 }
 
 *, *::before, *::after {
@@ -9,8 +13,131 @@
 }
 
 .font-16-light-150-n1 {
-    font-size: 16px;
-    font-weight: 400;
+    font-size: 16px !important;
+    font-weight: 400 !important;
     line-height: 150%;
-    letter-spacing: -0.16px;
+    letter-spacing: 0.002% !important;
 }
+
+.font-18-bold-150 {
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 150%;
+}
+
+.font-24-light-32p-n1 {
+    font-size: 24px !important;
+    font-weight: 400 !important;
+    line-height: 32px;
+    letter-spacing: -0.24px !important;
+}
+
+.font-80-bolder-105-n1 {
+    font-size: 80px !important;
+    font-weight: 700 !important;
+    line-height: 84px;
+    letter-spacing: -1.6px !important;
+}
+
+.font-col-white {
+    color: var(--white-1) !important;
+}
+
+/* custom component styles  */
+.custom-button {
+    display: flex;
+    padding: 16px 24px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 100px;
+    min-width: 300px;
+    cursor: pointer;
+    display: inline-block;
+}
+/* hero-container section  */
+.hero-container > .background-container {
+    background-image: url(../img/background/hero-bg.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* nav bar  */
+.nav-bar-style {
+    justify-content: end;
+}
+
+.nav-link.font-col-white:hover {
+    color: var(--base) !important;
+}
+
+nav.navbar.navbar-expand-sm {
+    padding: 30px 0;
+    border-bottom: 1px solid var(--white-2);
+}
+
+ul.navbar-nav {
+    gap: 40px;
+}
+
+/* hero-section  */
+.hero-section-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 770px;
+}
+
+.hero-section-button {
+    background-color: var(--white-4);
+    border-color: var(--white-5);
+    backdrop-filter: blur(12px);
+    text-align: center;
+}
+
+/* bot-section  */
+.bot-section {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.bot-section-part {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* intro-container */
+.intro-container-background {
+    background-image: url(../img/background/intro-bg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.intro-section-button {
+    background-color: var(--base);
+    border-color: var(--white-5);
+    backdrop-filter: blur(12px);
+    text-align: center;
+}
+
+/* setups-container */
+.setups-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* easy-to-setup-container */
+.easy-to-setup-background {
+    background-image: url(../img/background/easy-to-setup-bg.gif);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* compact-container */
