@@ -8,7 +8,10 @@
     --white-6: #DBE2EE;
     --black-1: #0000004D;
     --black-2: #2B2B2B;
+    --gray-1: #9CA3AF;
+    --gray-2: #FFFFFF0D;
     --base: #FF6716;
+    --star: #ffc106;
 }
 
 *, *::before, *::after {
@@ -87,6 +90,13 @@ body {
     color: var(--white-6) !important;
 }
 
+.font-col-gray-light {
+    color: var(--gray-1) !important;
+}
+
+.font-col-star {
+    color: var(--star) !important;
+}
 .navbar-toggler {
     border: none !important;
 }
@@ -119,6 +129,7 @@ body {
     background-image: url(../img/background/hero-bg.gif);
     background-position: center;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
 
@@ -188,6 +199,7 @@ ul.navbar-nav {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     min-height: 755px;
     padding-top: 115px;
 }
@@ -236,6 +248,7 @@ ul.navbar-nav {
     background: linear-gradient(180deg, #333 0%, rgba(51, 51, 51, 0.00) 100%), url(../img/background/easy-to-setup-bg.gif), lightgray 50% / cover no-repeat;
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: center;
     height: 840px;
 }
 
@@ -383,13 +396,94 @@ ul.navbar-nav {
 .gallery-explanation-decs {
     max-width: 400px;
 }
-/* faq container  */
-/* cta-container  */
-.cta-price {
-    display: inline-flex;
+/* review  */
+.reviews-map {
+    display: flex;
     justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+}
+.review-part-block {
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    flex-direction: column;
+    gap: 20px;
+}
+.review-part {
+   padding: 20px 28px;
+   border: 1px solid var(--white-2);
+   border-radius: 10px;
+   max-width: 380px;
+   text-align: left;
+}
+.review-content-desc {
+    max-width: 500px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+.review-background {
+    background: linear-gradient(180deg, #333 0%, rgba(51, 51, 51, 0.00) 100%), url(../img/background/reviews-bg.gif), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 710px;
+}
+/* faq container  */
+.faq-part {
+    max-width: 1000px;
+    padding: 28px 40px;
+    background-color: var(--gray-2);
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+/* cta-container  */
+.cta-background {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.50) 0%, rgba(0, 0, 0, 0.50) 100%), url(../img/background/cta-bg.gif), lightgray 50% / cover no-repeat;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.cta-content {
+    padding-top: 100px;
+}
+
+.cta-title {
+    max-width :480px;
+}
+
+.cta-price {
+    max-width :530px;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    gap: 40px;
+    margin: auto;
+}
+.cta-price > .cta-price-part:first-of-type {
+    border-right: 1px solid var(--white-2);
+}
+.cta-price-part {
+    min-width: 290px;
+}
+.cta-section-button {
+    background-color: var(--base);
+    border-color: var(--white-5);
+    backdrop-filter: blur(12px);
+    text-align: center;
+    margin: 40px auto 100px;
+}
+.cta-footer {
+    background-color: rgba(0, 0, 0, 0.30);
+    backdrop-filter: blur(12px);
+}
+.cta-footer-content {
+    gap: 100px;
+    justify-content: space-between;
+    padding: 32px 0;
+}
+.cta-footer-part a {
+    color: var(--base);
 }
 /* footer container section  */
 .footer-container {
@@ -431,6 +525,10 @@ ul.navbar-nav {
     }
     .gallery-explanation {
         width: 100%;
+    }
+    .reviews-map {
+        flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -535,6 +633,37 @@ ul.navbar-nav {
     .mobile-app-images-container {
         margin-top: 150px;
         margin-bottom: 150px;
+    }
+    .review-background {
+        height: 220px;
+    }
+    .faq-content-title {
+        font-size: 24px !important;
+    }
+    .faq-part > p:first-of-type {
+        font-size: 12px !important;
+    }
+    .faq-part > p:last-of-type {
+        font-size: 12px !important;
+    }
+    .cta-title > .font-36-light-42p-n1 {
+        font-size: 24px !important;
+    }
+    .cta-title > .font-16-light-150-n1 {
+        font-size: 12px !important;
+    }
+    .cta-price-part > .font-36-bold-32p-n1 {
+        font-size: 24px !important;
+    }
+    .cta-price-part > .font-24-light-32p-n1 {
+        font-size: 12px !important;
+    }
+    .cta-footer-part {
+        font-size: 12px !important;
+    }
+    .cta-footer-content {
+        flex-direction: column;
+        gap: 12px;
     }
 }
 
