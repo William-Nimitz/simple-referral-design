@@ -706,11 +706,23 @@ ul.navbar-nav {
     .gallery-explanation > .font-16-light-150-n1 {
         font-size: 12px !important;
     }
+
+    .cta-price-part {
+        min-width: 190px;
+    }
 }
 
 @media screen and (max-width: 450px) { 
     .mobile-app-images-container {
         margin-top: 100px;
         margin-bottom: 100px;
+    }
+}
+
+@media screen and (max-width: 400px) { 
+    .cta-price-part {
+        min-width: auto;
+        padding-right: 10px;
+        padding-left: 10px;
     }
 }
